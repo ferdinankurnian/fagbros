@@ -107,5 +107,38 @@
   <ItemGroup>
     <None Include="Resources\Coin.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Base-01 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tiles 14 24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 82.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 82 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif-5-8a727438d8 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 75.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Character1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
