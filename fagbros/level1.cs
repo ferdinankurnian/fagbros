@@ -22,9 +22,27 @@ namespace fagbros
         int score = 0; // default score integer set to 0
         int playSpeed = 18; //this integer will set players speed to 18
         int backLeft = 8; // this integer will set the background moving speed to 8
+
+        Image grassTerrain;
+
         public formLevel1()
         {
             InitializeComponent();
+            LoadImages();
+        }
+
+        private void LoadImages()
+        {
+            SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.UserPaint, true);
+
+            grassTerrain = Properties.Resources.Terrain_Left;
+
+            ImageAnimator.Animate(grassTerrain, this.OnFrameChangedHandler);
+        }
+
+        private void OnFrameChangedHandler(object sender, EventArgs e)
+        {
+            this.Invalidate();
         }
 
         private void formLevel1_Load(object sender, EventArgs e)
@@ -193,6 +211,13 @@ namespace fagbros
             {
                 jumping = false;
             }
+        }
+
+        private void DrawAnimationPaintEvent(object sender, PaintEventArgs e)
+        {
+            ImageAnimator.UpdateFrames(grassTerrain);
+
+            e.Graphics.DrawImage(grassTerrain, new Point(200, 250));
         }
     }
 }

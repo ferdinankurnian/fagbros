@@ -164,6 +164,7 @@
             // 
             this.grass1.BackColor = System.Drawing.Color.Transparent;
             this.grass1.BackgroundImage = global::fagbros.Properties.Resources.Terrain_Left;
+            this.grass1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.grass1.Location = new System.Drawing.Point(0, 439);
             this.grass1.Name = "grass1";
             this.grass1.Size = new System.Drawing.Size(135, 69);
@@ -178,11 +179,12 @@
             this.background.Image = global::fagbros.Properties.Resources.Background_1;
             this.background.Location = new System.Drawing.Point(0, 0);
             this.background.Name = "background";
-            this.background.Size = new System.Drawing.Size(1122, 578);
+            this.background.Size = new System.Drawing.Size(1370, 578);
             this.background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.background.TabIndex = 0;
             this.background.TabStop = false;
             this.background.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.background.Paint += new System.Windows.Forms.PaintEventHandler(this.DrawAnimationPaintEvent);
             // 
             // pictureBox6
             // 
@@ -216,7 +218,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1122, 578);
+            this.ClientSize = new System.Drawing.Size(1370, 578);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.door);
