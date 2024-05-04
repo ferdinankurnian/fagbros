@@ -16,5 +16,10 @@ namespace fagbros
         {
             InitializeComponent();
         }
+
+        private void level3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
