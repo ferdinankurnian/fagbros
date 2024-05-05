@@ -71,7 +71,7 @@ namespace fagbros
             }
             // if go left is true and players left is greater than 100 pixels
             // only then move player towards left of the 
-            if (goleft && player.Left > 100)
+            if (goleft && player.Left > 2)
             {
                 player.Left -= playSpeed;
             }
@@ -83,37 +83,7 @@ namespace fagbros
             {
                 player.Left += playSpeed;
             }
-            // by doing the if statement above, the player picture will stop on the forms right
-            // if go right is true and the background picture left is greater 1352
-            // then we move the background picture towards the left
-            //if (goright && background.Left > -1353)
-            //{
-            //    background.Left -= backLeft;
-            //    // the for loop below is checking to see the terrains and coins in the level
-            //    // when they are found it will move them towards the left
-            //    foreach (Control x in this.Controls)
-            //    {
-            //        if (x is PictureBox && x.Tag == "terrain" || x is PictureBox && x.Tag == "coin" || x is PictureBox && x.Tag == "door" || x is PictureBox && x.Tag == "key")
-            //        {
-            //            x.Left -= backLeft;
-            //        }
-            //    }
-            //}
-            // if go left is true and the background pictures left is less than 2
-            // then we move the background picture towards the right
-            //if (goleft && background.Left < 2)
-            //{
-            //    background.Left += backLeft;
-            //    // below the is the for loop thats checking to see the terrains and coins in the level
-            //    // when they are found in the level it will move them all towards the right with the background
-            //    foreach (Control x in this.Controls)
-            //    {
-            //        if (x is PictureBox && x.Tag == "terrain" || x is PictureBox && x.Tag == "coin" || x is PictureBox && x.Tag == "door" || x is PictureBox && x.Tag == "key")
-            //        {
-            //            x.Left += backLeft;
-            //        }
-            //    }
-            //}
+
             // below if the for loop thats checking for all of the controls in this form
             foreach (Control x in this.Controls)
             {
@@ -126,7 +96,7 @@ namespace fagbros
                     {
                         // then we do the following
                         force = 8; // set the force to 8
-                        player.Top = x.Top - player.Height; // also we place the player on top of the picture box
+                        player.Top = x.Top - player.Height + 10; // also we place the player on top of the picture box
                         jumpSpeed = 0; // set the jump speed to 0
                     }
                 }
@@ -157,6 +127,7 @@ namespace fagbros
             {
                 gameTimer.Stop(); // stop the timer
                 MessageBox.Show("You Died!!!"); // show the message box
+                restartGame();
             }
         }
 
@@ -202,6 +173,12 @@ namespace fagbros
             {
                 jumping = false;
             }
+        }
+
+        public void restartGame()
+        {
+            gameTimer.Start();
+            player.Location = new Point(130, 254);
         }
 
         private void closeToMainMenu(object sender, FormClosedEventArgs e)

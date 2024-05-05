@@ -15,6 +15,18 @@ namespace fagbros.ModalDialogs
         public selectLevel()
         {
             InitializeComponent();
+            this.BackColor = Color.LimeGreen;
+            this.TransparencyKey = Color.LimeGreen;
+        }
+
+        private void selectLevel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
