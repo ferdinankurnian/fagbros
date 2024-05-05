@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace fagbros
+namespace fagbros.ModalDialogs
 {
-    public partial class formLevel2 : Form
+    public partial class selectLevel : Form
     {
-        public formLevel2()
+        public selectLevel()
         {
             InitializeComponent();
         }

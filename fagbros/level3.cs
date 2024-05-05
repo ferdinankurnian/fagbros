@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace fagbros
 {
-    public partial class level3 : Form
+    public partial class formLevel3 : Form
     {
-        public level3()
+        public formLevel3()
         {
             InitializeComponent();
         }

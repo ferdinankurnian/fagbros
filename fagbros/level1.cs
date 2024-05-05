@@ -1,4 +1,5 @@
-﻿using System;
+﻿using fagbros.ModalDialogs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,21 +24,9 @@ namespace fagbros
         int playSpeed = 18; //this integer will set players speed to 18
         int backLeft = 8; // this integer will set the background moving speed to 8
 
-        Image grassTerrain;
-
         public formLevel1()
         {
             InitializeComponent();
-            LoadImages();
-        }
-
-        private void LoadImages()
-        {
-            SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.UserPaint, true);
-
-            grassTerrain = Properties.Resources.Terrain_Left;
-
-            ImageAnimator.Animate(grassTerrain, this.OnFrameChangedHandler);
         }
 
         private void OnFrameChangedHandler(object sender, EventArgs e)
@@ -97,34 +86,34 @@ namespace fagbros
             // by doing the if statement above, the player picture will stop on the forms right
             // if go right is true and the background picture left is greater 1352
             // then we move the background picture towards the left
-            if (goright && background.Left > -1353)
-            {
-                background.Left -= backLeft;
-                // the for loop below is checking to see the terrains and coins in the level
-                // when they are found it will move them towards the left
-                foreach (Control x in this.Controls)
-                {
-                    if (x is PictureBox && x.Tag == "terrain" || x is PictureBox && x.Tag == "coin" || x is PictureBox && x.Tag == "door" || x is PictureBox && x.Tag == "key")
-                    {
-                        x.Left -= backLeft;
-                    }
-                }
-            }
+            //if (goright && background.Left > -1353)
+            //{
+            //    background.Left -= backLeft;
+            //    // the for loop below is checking to see the terrains and coins in the level
+            //    // when they are found it will move them towards the left
+            //    foreach (Control x in this.Controls)
+            //    {
+            //        if (x is PictureBox && x.Tag == "terrain" || x is PictureBox && x.Tag == "coin" || x is PictureBox && x.Tag == "door" || x is PictureBox && x.Tag == "key")
+            //        {
+            //            x.Left -= backLeft;
+            //        }
+            //    }
+            //}
             // if go left is true and the background pictures left is less than 2
             // then we move the background picture towards the right
-            if (goleft && background.Left < 2)
-            {
-                background.Left += backLeft;
-                // below the is the for loop thats checking to see the terrains and coins in the level
-                // when they are found in the level it will move them all towards the right with the background
-                foreach (Control x in this.Controls)
-                {
-                    if (x is PictureBox && x.Tag == "terrain" || x is PictureBox && x.Tag == "coin" || x is PictureBox && x.Tag == "door" || x is PictureBox && x.Tag == "key")
-                    {
-                        x.Left += backLeft;
-                    }
-                }
-            }
+            //if (goleft && background.Left < 2)
+            //{
+            //    background.Left += backLeft;
+            //    // below the is the for loop thats checking to see the terrains and coins in the level
+            //    // when they are found in the level it will move them all towards the right with the background
+            //    foreach (Control x in this.Controls)
+            //    {
+            //        if (x is PictureBox && x.Tag == "terrain" || x is PictureBox && x.Tag == "coin" || x is PictureBox && x.Tag == "door" || x is PictureBox && x.Tag == "key")
+            //        {
+            //            x.Left += backLeft;
+            //        }
+            //    }
+            //}
             // below if the for loop thats checking for all of the controls in this form
             foreach (Control x in this.Controls)
             {
@@ -158,7 +147,9 @@ namespace fagbros
                 // then we change the image of the door to open
                 // and we stop the timer
                 gameTimer.Stop();
-                MessageBox.Show("You Completed the level!!"); // show the message box
+
+                levelComplete lvlComplete = new levelComplete(); // Instantiate a Form3 object.
+                lvlComplete.Show(); // Show Form3 and
             }
             // this is where the player dies
             // if the player goes below the forms height then we will end the game
@@ -213,11 +204,10 @@ namespace fagbros
             }
         }
 
-        private void DrawAnimationPaintEvent(object sender, PaintEventArgs e)
+        private void closeToMainMenu(object sender, FormClosedEventArgs e)
         {
-            ImageAnimator.UpdateFrames(grassTerrain);
-
-            e.Graphics.DrawImage(grassTerrain, new Point(200, 250));
+            mainMenu maMenu = new mainMenu(); // Instantiate a Form3 object.
+            maMenu.Show(); // Show Form3 and
         }
     }
 }

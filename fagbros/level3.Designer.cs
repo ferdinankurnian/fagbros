@@ -1,6 +1,6 @@
 ﻿namespace fagbros
 {
-    partial class level3
+    partial class formLevel3
     {
         /// <summary>
         /// Required designer variable.
@@ -252,9 +252,9 @@
             this.pictureBox28.TabIndex = 19;
             this.pictureBox28.TabStop = false;
             // 
-            // level3
+            // formLevel3
             // 
-            this.ClientSize = new System.Drawing.Size(2564, 662);
+            this.ClientSize = new System.Drawing.Size(1370, 662);
             this.Controls.Add(this.pictureBox28);
             this.Controls.Add(this.pictureBox27);
             this.Controls.Add(this.pictureBox25);
@@ -275,7 +275,7 @@
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox5);
-            this.Name = "level3";
+            this.Name = "formLevel3";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();

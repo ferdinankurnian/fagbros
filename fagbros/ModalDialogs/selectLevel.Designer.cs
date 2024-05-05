@@ -1,6 +1,6 @@
-﻿namespace fagbros
+﻿namespace fagbros.ModalDialogs
 {
-    partial class formLevel2
+    partial class selectLevel
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formLevel2));
             this.SuspendLayout();
             // 
-            // formLevel2
+            // selectLevel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1076, 536);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "formLevel2";
-            this.Text = "FAG Bros - Level 2";
+            this.ClientSize = new System.Drawing.Size(454, 497);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "selectLevel";
+            this.Text = "selectLevel";
             this.ResumeLayout(false);
 
         }
