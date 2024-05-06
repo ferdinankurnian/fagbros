@@ -29,8 +29,11 @@
         private void InitializeComponent()
         {
             this.bgSelectLevel = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
             this.lblSelectLevel = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnLevel1 = new System.Windows.Forms.Button();
+            this.btnLevel2 = new System.Windows.Forms.Button();
+            this.btnLevel3 = new System.Windows.Forms.Button();
             this.bgSelectLevel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -38,6 +41,9 @@
             // 
             this.bgSelectLevel.BackgroundImage = global::fagbros.Properties.Resources.Save_Games;
             this.bgSelectLevel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bgSelectLevel.Controls.Add(this.btnLevel3);
+            this.bgSelectLevel.Controls.Add(this.btnLevel2);
+            this.bgSelectLevel.Controls.Add(this.btnLevel1);
             this.bgSelectLevel.Controls.Add(this.lblSelectLevel);
             this.bgSelectLevel.Controls.Add(this.btnClose);
             this.bgSelectLevel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -45,6 +51,19 @@
             this.bgSelectLevel.Name = "bgSelectLevel";
             this.bgSelectLevel.Size = new System.Drawing.Size(365, 450);
             this.bgSelectLevel.TabIndex = 0;
+            // 
+            // lblSelectLevel
+            // 
+            this.lblSelectLevel.AutoSize = true;
+            this.lblSelectLevel.BackColor = System.Drawing.Color.Transparent;
+            this.lblSelectLevel.Font = new System.Drawing.Font("Maiandra GD", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(50)))), ((int)(((byte)(24)))), ((int)(((byte)(20)))));
+            this.lblSelectLevel.Location = new System.Drawing.Point(112, 14);
+            this.lblSelectLevel.Name = "lblSelectLevel";
+            this.lblSelectLevel.Size = new System.Drawing.Size(133, 26);
+            this.lblSelectLevel.TabIndex = 1;
+            this.lblSelectLevel.Text = "Select Level";
+            this.lblSelectLevel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnClose
             // 
@@ -58,17 +77,35 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // lblSelectLevel
+            // btnLevel1
             // 
-            this.lblSelectLevel.AutoSize = true;
-            this.lblSelectLevel.BackColor = System.Drawing.Color.Transparent;
-            this.lblSelectLevel.Font = new System.Drawing.Font("Maiandra GD", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectLevel.Location = new System.Drawing.Point(122, 15);
-            this.lblSelectLevel.Name = "lblSelectLevel";
-            this.lblSelectLevel.Size = new System.Drawing.Size(115, 22);
-            this.lblSelectLevel.TabIndex = 1;
-            this.lblSelectLevel.Text = "Select Level";
-            this.lblSelectLevel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLevel1.Location = new System.Drawing.Point(58, 101);
+            this.btnLevel1.Name = "btnLevel1";
+            this.btnLevel1.Size = new System.Drawing.Size(247, 60);
+            this.btnLevel1.TabIndex = 2;
+            this.btnLevel1.Text = "Level 1";
+            this.btnLevel1.UseVisualStyleBackColor = true;
+            this.btnLevel1.Click += new System.EventHandler(this.btnLevel1_Click);
+            // 
+            // btnLevel2
+            // 
+            this.btnLevel2.Location = new System.Drawing.Point(58, 225);
+            this.btnLevel2.Name = "btnLevel2";
+            this.btnLevel2.Size = new System.Drawing.Size(247, 60);
+            this.btnLevel2.TabIndex = 2;
+            this.btnLevel2.Text = "Level 2";
+            this.btnLevel2.UseVisualStyleBackColor = true;
+            this.btnLevel2.Click += new System.EventHandler(this.btnLevel2_Click);
+            // 
+            // btnLevel3
+            // 
+            this.btnLevel3.Location = new System.Drawing.Point(58, 348);
+            this.btnLevel3.Name = "btnLevel3";
+            this.btnLevel3.Size = new System.Drawing.Size(247, 60);
+            this.btnLevel3.TabIndex = 2;
+            this.btnLevel3.Text = "Level 3";
+            this.btnLevel3.UseVisualStyleBackColor = true;
+            this.btnLevel3.Click += new System.EventHandler(this.btnLevel3_Click);
             // 
             // selectLevel
             // 
@@ -94,5 +131,8 @@
         private System.Windows.Forms.Panel bgSelectLevel;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblSelectLevel;
+        private System.Windows.Forms.Button btnLevel2;
+        private System.Windows.Forms.Button btnLevel1;
+        private System.Windows.Forms.Button btnLevel3;
     }
 }

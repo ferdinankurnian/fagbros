@@ -51,7 +51,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.greetingBox = new System.Windows.Forms.PictureBox();
             this.txtUserLogIn = new System.Windows.Forms.TextBox();
             this.btnLogInUser = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,7 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.greetingBox)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPlay
@@ -332,16 +332,16 @@
             this.pictureBox9.TabIndex = 5;
             this.pictureBox9.TabStop = false;
             // 
-            // pictureBox10
+            // greetingBox
             // 
-            this.pictureBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox10.BackgroundImage = global::fagbros.Properties.Resources.Group_84;
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox10.Location = new System.Drawing.Point(906, 42);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(250, 85);
-            this.pictureBox10.TabIndex = 6;
-            this.pictureBox10.TabStop = false;
+            this.greetingBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.greetingBox.BackgroundImage = global::fagbros.Properties.Resources.Group_84;
+            this.greetingBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.greetingBox.Location = new System.Drawing.Point(906, 42);
+            this.greetingBox.Name = "greetingBox";
+            this.greetingBox.Size = new System.Drawing.Size(250, 85);
+            this.greetingBox.TabIndex = 6;
+            this.greetingBox.TabStop = false;
             // 
             // txtUserLogIn
             // 
@@ -356,10 +356,11 @@
             this.txtUserLogIn.Name = "txtUserLogIn";
             this.txtUserLogIn.Size = new System.Drawing.Size(250, 32);
             this.txtUserLogIn.TabIndex = 7;
-            this.txtUserLogIn.Text = "Iydheko";
+            this.txtUserLogIn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnLogInUser
             // 
+            this.btnLogInUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogInUser.BackgroundImage = global::fagbros.Properties.Resources.Long_Button;
             this.btnLogInUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnLogInUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -380,7 +381,7 @@
             this.BackgroundImage = global::fagbros.Properties.Resources.Background_1;
             this.ClientSize = new System.Drawing.Size(1185, 548);
             this.Controls.Add(this.txtUserLogIn);
-            this.Controls.Add(this.pictureBox10);
+            this.Controls.Add(this.greetingBox);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox7);
@@ -428,7 +429,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.greetingBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -457,7 +458,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox greetingBox;
         private System.Windows.Forms.TextBox txtUserLogIn;
         private System.Windows.Forms.Button btnLogInUser;
     }
