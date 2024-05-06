@@ -142,6 +142,7 @@
             this.pictureBox16.Size = new System.Drawing.Size(222, 38);
             this.pictureBox16.TabIndex = 7;
             this.pictureBox16.TabStop = false;
+            this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click);
             // 
             // pictureBox17
             // 
@@ -254,7 +255,7 @@
             // 
             // level3
             // 
-            this.ClientSize = new System.Drawing.Size(2564, 662);
+            this.ClientSize = new System.Drawing.Size(1924, 662);
             this.Controls.Add(this.pictureBox28);
             this.Controls.Add(this.pictureBox27);
             this.Controls.Add(this.pictureBox25);

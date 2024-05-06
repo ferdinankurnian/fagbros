@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace fagbros
 {
-    public partial class level3 : Form
+    public partial class level2 : Form
     {
-        public level3()
+        public level2()
         {
             InitializeComponent();
-        }
-
-        private void level3_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox16_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
