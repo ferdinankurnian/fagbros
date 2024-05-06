@@ -27,6 +27,8 @@ namespace fagbros
         public formLevel1()
         {
             InitializeComponent();
+            mainMenu masmenu = new mainMenu();
+            masmenu.Hide();
         }
 
         private void OnFrameChangedHandler(object sender, EventArgs e)
