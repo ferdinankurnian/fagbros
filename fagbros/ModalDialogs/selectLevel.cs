@@ -42,11 +42,17 @@ namespace fagbros.ModalDialogs
         private void btnLevel2_Click(object sender, EventArgs e)
         {
 
+            formLevel2 lvl2 = new formLevel2(); // form Level 1
+            lvl2.Show();
+            this.Close();
         }
 
         private void btnLevel3_Click(object sender, EventArgs e)
         {
 
+            formLevel3 lvl3 = new formLevel3(); // form Level 1
+            lvl3.Show();
+            this.Close();
         }
     }
 }

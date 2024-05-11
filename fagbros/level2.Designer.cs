@@ -1,6 +1,10 @@
 ﻿namespace fagbros
 {
+<<<<<<< HEAD
+    partial class level2
+=======
     partial class formLevel2
+>>>>>>> 163fcb1989b5d24be00bcd1b84207cf23faab191
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +32,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "level2";
+=======
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formLevel2));
             this.SuspendLayout();
             // 
@@ -41,6 +51,7 @@
             this.Text = "FAG Bros - Level 2";
             this.ResumeLayout(false);
 
+>>>>>>> 163fcb1989b5d24be00bcd1b84207cf23faab191
         }
 
         #endregion

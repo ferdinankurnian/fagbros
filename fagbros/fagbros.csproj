@@ -147,6 +147,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="level2.resx">
       <DependentUpon>level2.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="level3.resx">
       <DependentUpon>level3.cs</DependentUpon>
