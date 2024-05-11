@@ -163,6 +163,16 @@ namespace fagbros.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dirt {
+            get {
+                object obj = ResourceManager.GetObject("dirt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ezgif_5_8a727438d8_11 {
             get {
                 object obj = ResourceManager.GetObject("ezgif-5-8a727438d8 11", resourceCulture);
@@ -273,6 +283,16 @@ namespace fagbros.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lava {
+            get {
+                object obj = ResourceManager.GetObject("lava", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Long_Button {
             get {
                 object obj = ResourceManager.GetObject("Long Button", resourceCulture);
@@ -333,6 +353,16 @@ namespace fagbros.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Settings_Menu {
+            get {
+                object obj = ResourceManager.GetObject("Settings Menu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Terrain_Left {
             get {
                 object obj = ResourceManager.GetObject("Terrain Left", resourceCulture);
@@ -376,6 +406,16 @@ namespace fagbros.Properties {
         internal static System.Drawing.Bitmap Tree_Logs {
             get {
                 object obj = ResourceManager.GetObject("Tree Logs", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Welcome_GUI__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Welcome GUI (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

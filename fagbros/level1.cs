@@ -18,17 +18,17 @@ namespace fagbros
         bool goleft = false; // boolean untuk kontrol player ke kiri
         bool goright = false; // boolean untuk kontrol player ke kanan
         bool jumping = false; // boolean untuk cek jika player melompat
-        int jumpSpeed = 10; // integer untuk set kecepatan lompat
-        int force = 8; // force of the jump in an integer
+        int jumpSpeed = 24; // integer untuk set kecepatan lompat
+        int force = 5; // force of the jump in an integer
         int score = 0; // default score integer set to 0
-        int playSpeed = 18; //this integer will set players speed to 18
+        int playSpeed = 24; //this integer will set players speed to 18
         int backLeft = 8; // this integer will set the background moving speed to 8
 
         public formLevel1()
         {
             InitializeComponent();
-            mainMenu masmenu = new mainMenu();
-            masmenu.Hide();
+            //mainMenu masmenu = new mainMenu();
+            //masmenu.Hide();
         }
 
         private void OnFrameChangedHandler(object sender, EventArgs e)
@@ -63,17 +63,17 @@ namespace fagbros
             // reduce force by 1
             if (jumping)
             {
-                jumpSpeed = -12;
+                jumpSpeed = -24;
                 force -= 1;
             }
             else
             {
                 // else change the jump speed to 12
-                jumpSpeed = 12;
+                jumpSpeed = 24;
             }
             // if go left is true and players left is greater than 100 pixels
             // only then move player towards left of the 
-            if (goleft && player.Left > 2)
+            if (goleft && player.Left > 8)
             {
                 player.Left -= playSpeed;
             }
@@ -81,7 +81,7 @@ namespace fagbros
             // if go right Boolean is true
             // player left plus players width plus 100 is less than the forms width
             // then we move the player towards the right by adding to the players left
-            if (goright && player.Left + (player.Width + 100) < this.ClientSize.Width)
+            if (goright && player.Left + (player.Width + 5) < this.ClientSize.Width)
             {
                 player.Left += playSpeed;
             }
@@ -96,12 +96,43 @@ namespace fagbros
                     // and jumping is set to false
                     if (player.Bounds.IntersectsWith(x.Bounds) && !jumping)
                     {
-                        // then we do the following
-                        force = 8; // set the force to 8
-                        player.Top = x.Top - player.Height + 10; // also we place the player on top of the picture box
-                        jumpSpeed = 0; // set the jump speed to 0
+                        if (player.Top < x.Top)
+                        {
+                            // then we do the following
+                            force = 8; // set the force to 8
+                            player.Top = x.Top - player.Height + 1; // also we place the player on top of the picture box
+                            jumpSpeed = 0; // set the jump speed to 0
+                        }
+                        else if (goleft && player.Left < x.Right)
+                        {
+                            player.Left = x.Right - player.Width + 18;
+                            player.Left += playSpeed;
+                        }
+                        else if (goright && player.Left + player.Width > x.Left)
+                        {
+                            player.Left -= playSpeed;
+                        }
+                        else if (player.Top < x.Top + x.Height)
+                        {
+                            player.Top = x.Top + x.Height + 20;
+                            jumpSpeed -= playSpeed;
+                        }
                     }
                 }
+
+                if (x is PictureBox && x.Tag == "lava")
+                {
+                    if (player.Bounds.IntersectsWith(x.Bounds))
+                    {
+                        if(player.Top > x.Top)
+                        {
+                            gameTimer.Stop(); // stop the timer
+                            MessageBox.Show("You Died!!!"); // show the message box
+                            restartGame();
+                        }
+                    }
+                }
+
                 // if the picture box found has a tag of coin
                 if (x is PictureBox && x.Tag == "coin")
                 {
@@ -187,6 +218,11 @@ namespace fagbros
         {
             mainMenu maMenu = new mainMenu(); // Instantiate a Form3 object.
             maMenu.Show(); // Show Form3 and
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

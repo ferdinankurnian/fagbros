@@ -37,7 +37,7 @@ namespace fagbros
         private void btnPlay_Click(object sender, EventArgs e)
         {
             selectLevel modalSelectLevel = new selectLevel(); // Aktifkan Modal Select Level
-            modalSelectLevel.ShowDialog(); // Tampilkam modal Select Level
+            modalSelectLevel.Show(); // Tampilkam modal Select Level
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace fagbros
 
         public static class UserManager
         {
-            private static readonly string usersFilePath = "D:\\Projects\\fagbros\\fagbros\\Data\\user.json";
+            private static readonly string usersFilePath = "Data/user.json";
 
             public static List<User> LoadUsers()
             {
@@ -100,6 +100,12 @@ namespace fagbros
                 };
                 UserManager.SaveUser(newUser); 
             }
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            settings modalSettings = new settings(); // Aktifkan Modal Select Level
+            modalSettings.Show(); // Tampilkam modal Select Level
         }
     }
 }

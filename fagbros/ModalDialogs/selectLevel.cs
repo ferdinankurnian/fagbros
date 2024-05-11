@@ -32,10 +32,11 @@ namespace fagbros.ModalDialogs
 
         private void btnLevel1_Click(object sender, EventArgs e)
         {
-
             formLevel1 lvl1 = new formLevel1(); // form Level 1
+            mainMenu mmenu = new mainMenu(); // form Level 1
             lvl1.Show();
-            this.Close();
+            mmenu.Hide();
+            this.Hide();
         }
 
         private void btnLevel2_Click(object sender, EventArgs e)
