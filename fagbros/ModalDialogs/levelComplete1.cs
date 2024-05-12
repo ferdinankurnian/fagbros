@@ -10,19 +10,24 @@ using System.Windows.Forms;
 
 namespace fagbros.ModalDialogs
 {
-    public partial class levelComplete : Form
+    public partial class levelComplete1 : Form
     {
-        public levelComplete()
+        public levelComplete1()
         {
             InitializeComponent();
+            this.BackColor = Color.LimeGreen;
+            this.TransparencyKey = Color.LimeGreen;
         }
 
         private void goMainMenu_Click(object sender, EventArgs e)
         {
-            // mainMenu maMenu = new mainMenu(); // Instantiate a Form3 object.
-            //formLevel1 flvle1 = new formLevel1(); // Instantiate a Form3 object.
-            //flvle1.Close(); // Show Form3 and
-            // maMenu.Show(); // Show Form3 and
+            this.DialogResult = DialogResult.No;
+            this.Close();
+        }
+
+        private void nextLevel_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
     }

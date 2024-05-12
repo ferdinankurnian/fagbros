@@ -116,17 +116,35 @@
     <Compile Include="mainMenu.Designer.cs">
       <DependentUpon>mainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModalDialogs\levelComplete.cs">
+    <Compile Include="ModalDialogs\levelComplete1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModalDialogs\levelComplete.Designer.cs">
-      <DependentUpon>levelComplete.cs</DependentUpon>
+    <Compile Include="ModalDialogs\levelComplete1.Designer.cs">
+      <DependentUpon>levelComplete1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModalDialogs\levelComplete2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalDialogs\levelComplete2.Designer.cs">
+      <DependentUpon>levelComplete2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModalDialogs\levelComplete3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalDialogs\levelComplete3.Designer.cs">
+      <DependentUpon>levelComplete3.cs</DependentUpon>
     </Compile>
     <Compile Include="ModalDialogs\selectLevel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModalDialogs\selectLevel.Designer.cs">
       <DependentUpon>selectLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModalDialogs\userAccountMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalDialogs\userAccountMenu.Designer.cs">
+      <DependentUpon>userAccountMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="ModalDialogs\welcome.cs">
       <SubType>Form</SubType>
@@ -155,11 +173,20 @@
     <EmbeddedResource Include="mainMenu.resx">
       <DependentUpon>mainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModalDialogs\levelComplete.resx">
-      <DependentUpon>levelComplete.cs</DependentUpon>
+    <EmbeddedResource Include="ModalDialogs\levelComplete1.resx">
+      <DependentUpon>levelComplete1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModalDialogs\levelComplete2.resx">
+      <DependentUpon>levelComplete2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModalDialogs\levelComplete3.resx">
+      <DependentUpon>levelComplete3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModalDialogs\selectLevel.resx">
       <DependentUpon>selectLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModalDialogs\userAccountMenu.resx">
+      <DependentUpon>userAccountMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModalDialogs\welcome.resx">
       <DependentUpon>welcome.cs</DependentUpon>
@@ -177,7 +204,6 @@
     <EmbeddedResource Include="settings.resx">
       <DependentUpon>settings.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Data\user.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -317,6 +343,60 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Heart Bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Welcome GUI %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Account Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonLevel 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Locked ButtonLevel 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Locked ButtonLevel 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonLevel 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonLevel 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coin Bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opened chest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Completed Level 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Completed Level 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Completed Level 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shunshine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pink flower.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

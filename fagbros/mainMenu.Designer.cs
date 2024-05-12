@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainMenu));
             this.btnPlay = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.Title = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -51,9 +51,8 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.greetingBox = new System.Windows.Forms.PictureBox();
-            this.txtUserLogIn = new System.Windows.Forms.TextBox();
-            this.btnLogInUser = new System.Windows.Forms.Button();
+            this.lblUsernameMainMenu = new System.Windows.Forms.Label();
+            this.userAccount = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
@@ -72,7 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.greetingBox)).BeginInit();
+            this.userAccount.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnPlay
@@ -89,29 +88,28 @@
             this.btnPlay.UseVisualStyleBackColor = true;
             this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
-            // panel1
+            // Title
             // 
-            this.panel1.BackgroundImage = global::fagbros.Properties.Resources.Group_83;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(42, 42);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(347, 114);
-            this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.Title.BackgroundImage = global::fagbros.Properties.Resources.Group_83;
+            this.Title.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Title.Location = new System.Drawing.Point(42, 42);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(347, 114);
+            this.Title.TabIndex = 1;
             // 
-            // btnClose
+            // btnExit
             // 
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClose.Font = new System.Drawing.Font("Maiandra GD", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(50)))), ((int)(((byte)(24)))), ((int)(((byte)(20)))));
-            this.btnClose.Image = global::fagbros.Properties.Resources.Long_Button__1_;
-            this.btnClose.Location = new System.Drawing.Point(42, 344);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(243, 64);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.Text = "Quit Game";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExit.Font = new System.Drawing.Font("Maiandra GD", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(50)))), ((int)(((byte)(24)))), ((int)(((byte)(20)))));
+            this.btnExit.Image = global::fagbros.Properties.Resources.Long_Button__1_;
+            this.btnExit.Location = new System.Drawing.Point(42, 344);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(243, 64);
+            this.btnExit.TabIndex = 0;
+            this.btnExit.Text = "Quit Game";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSettings
             // 
@@ -148,7 +146,6 @@
             this.pictureBox14.Size = new System.Drawing.Size(100, 180);
             this.pictureBox14.TabIndex = 4;
             this.pictureBox14.TabStop = false;
-            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
             // 
             // pictureBox15
             // 
@@ -194,7 +191,6 @@
             this.pictureBox23.Size = new System.Drawing.Size(100, 180);
             this.pictureBox23.TabIndex = 4;
             this.pictureBox23.TabStop = false;
-            this.pictureBox23.Click += new System.EventHandler(this.pictureBox14_Click);
             // 
             // pictureBox24
             // 
@@ -228,7 +224,6 @@
             this.pictureBox26.Size = new System.Drawing.Size(100, 180);
             this.pictureBox26.TabIndex = 4;
             this.pictureBox26.TabStop = false;
-            this.pictureBox26.Click += new System.EventHandler(this.pictureBox14_Click);
             // 
             // pictureBox27
             // 
@@ -287,7 +282,6 @@
             this.pictureBox5.Size = new System.Drawing.Size(100, 180);
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox14_Click);
             // 
             // pictureBox6
             // 
@@ -333,47 +327,30 @@
             this.pictureBox9.TabIndex = 5;
             this.pictureBox9.TabStop = false;
             // 
-            // greetingBox
+            // lblUsernameMainMenu
             // 
-            this.greetingBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.greetingBox.BackgroundImage = global::fagbros.Properties.Resources.Group_84;
-            this.greetingBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.greetingBox.Location = new System.Drawing.Point(906, 42);
-            this.greetingBox.Name = "greetingBox";
-            this.greetingBox.Size = new System.Drawing.Size(250, 85);
-            this.greetingBox.TabIndex = 6;
-            this.greetingBox.TabStop = false;
+            this.lblUsernameMainMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUsernameMainMenu.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsernameMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsernameMainMenu.Location = new System.Drawing.Point(25, 47);
+            this.lblUsernameMainMenu.Name = "lblUsernameMainMenu";
+            this.lblUsernameMainMenu.Size = new System.Drawing.Size(129, 16);
+            this.lblUsernameMainMenu.TabIndex = 7;
+            this.lblUsernameMainMenu.Text = "Someone";
+            this.lblUsernameMainMenu.Click += new System.EventHandler(this.lblUsernameMainMenu_Click);
             // 
-            // txtUserLogIn
+            // userAccount
             // 
-            this.txtUserLogIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtUserLogIn.BackColor = System.Drawing.Color.SaddleBrown;
-            this.txtUserLogIn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUserLogIn.Font = new System.Drawing.Font("Maiandra GD", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserLogIn.ForeColor = System.Drawing.Color.White;
-            this.txtUserLogIn.Location = new System.Drawing.Point(906, 133);
-            this.txtUserLogIn.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.txtUserLogIn.Multiline = true;
-            this.txtUserLogIn.Name = "txtUserLogIn";
-            this.txtUserLogIn.Size = new System.Drawing.Size(250, 32);
-            this.txtUserLogIn.TabIndex = 7;
-            this.txtUserLogIn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnLogInUser
-            // 
-            this.btnLogInUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogInUser.BackgroundImage = global::fagbros.Properties.Resources.Long_Button;
-            this.btnLogInUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLogInUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLogInUser.Font = new System.Drawing.Font("Maiandra GD", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogInUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(50)))), ((int)(((byte)(24)))), ((int)(((byte)(20)))));
-            this.btnLogInUser.Location = new System.Drawing.Point(1020, 171);
-            this.btnLogInUser.Name = "btnLogInUser";
-            this.btnLogInUser.Size = new System.Drawing.Size(136, 36);
-            this.btnLogInUser.TabIndex = 0;
-            this.btnLogInUser.Text = "Confirm";
-            this.btnLogInUser.UseVisualStyleBackColor = true;
-            this.btnLogInUser.Click += new System.EventHandler(this.btnLogInUser_Click);
+            this.userAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.userAccount.BackgroundImage = global::fagbros.Properties.Resources.User_Account;
+            this.userAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.userAccount.Controls.Add(this.lblUsernameMainMenu);
+            this.userAccount.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.userAccount.Location = new System.Drawing.Point(906, 42);
+            this.userAccount.Name = "userAccount";
+            this.userAccount.Size = new System.Drawing.Size(250, 100);
+            this.userAccount.TabIndex = 8;
+            this.userAccount.Click += new System.EventHandler(this.userAccount_Click);
             // 
             // mainMenu
             // 
@@ -381,8 +358,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::fagbros.Properties.Resources.Background_1;
             this.ClientSize = new System.Drawing.Size(1185, 548);
-            this.Controls.Add(this.txtUserLogIn);
-            this.Controls.Add(this.greetingBox);
+            this.Controls.Add(this.userAccount);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox7);
@@ -393,10 +369,9 @@
             this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox22);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Title);
             this.Controls.Add(this.btnSettings);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnLogInUser);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.pictureBox25);
             this.Controls.Add(this.pictureBox24);
@@ -411,7 +386,7 @@
             this.Name = "mainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FAG Bros";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.closeGame);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.closeGame);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
@@ -430,16 +405,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.greetingBox)).EndInit();
+            this.userAccount.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Button btnPlay;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Panel Title;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox14;
@@ -459,8 +433,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox greetingBox;
-        private System.Windows.Forms.TextBox txtUserLogIn;
-        private System.Windows.Forms.Button btnLogInUser;
+        private System.Windows.Forms.Label lblUsernameMainMenu;
+        private System.Windows.Forms.Panel userAccount;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using fagbros.ModalDialogs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,6 +39,8 @@ namespace fagbros
 
             // load total heart ke label
             getTotalHeart();
+
+            getTotalCoin();
 
             // if jumping is true and force is less than 0
             // then change jumping to false
@@ -138,9 +141,10 @@ namespace fagbros
                     // jika player collide dengan chest
                     if (player.Bounds.IntersectsWith(x.Bounds))
                     {
+                        x.Tag = "openedchest";
                         Random rndCoinChest = new Random(); // buat object random
                         int randomCoinGot = rndCoinChest.Next(1, 6); // range coin dari 1 sampai 5
-                                                                     // replace gambar menjadi chest terbuka
+                        x.BackgroundImage = Properties.Resources.opened_chest; // replace gambar menjadi chest terbuka
                         totalCoin += randomCoinGot; // tambahkan beberapa koin ke variabel coin
                     }
                 }
@@ -152,8 +156,21 @@ namespace fagbros
                 // stop the timer
                 mainGameTimer.Stop();
 
-                // levelComplete lvlComplete = new levelComplete(); // ambil form levelComplete
-                // lvlComplete.Show(); // Tampilkan dialog
+                using (levelComplete3 lvlComplete = new levelComplete3())
+                {
+                    if (lvlComplete.ShowDialog() == DialogResult.OK)
+                    {
+                        formLevel3 lvl2 = new formLevel3(); // form Level 1
+                        lvl2.Show();
+                        this.Hide();
+                    }
+                    else if (lvlComplete.ShowDialog() == DialogResult.No)
+                    {
+                        mainMenu MainMenu = new mainMenu(); // form Level 1
+                        MainMenu.Show();
+                        this.Hide();
+                    }
+                }
             }
         }
 

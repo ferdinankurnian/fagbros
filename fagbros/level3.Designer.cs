@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formLevel3));
             this.player = new System.Windows.Forms.PictureBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
@@ -51,6 +52,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblheart = new System.Windows.Forms.Label();
             this.door = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblcoin = new System.Windows.Forms.Label();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.pictureBox21 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
@@ -71,6 +78,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.door)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             this.SuspendLayout();
             // 
             // player
@@ -78,7 +90,7 @@
             this.player.BackColor = System.Drawing.Color.Brown;
             this.player.BackgroundImage = global::fagbros.Properties.Resources.Character11;
             this.player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.player.Location = new System.Drawing.Point(70, 260);
+            this.player.Location = new System.Drawing.Point(69, 472);
             this.player.Margin = new System.Windows.Forms.Padding(2);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(42, 72);
@@ -87,19 +99,22 @@
             // 
             // pictureBox17
             // 
-            this.pictureBox17.BackColor = System.Drawing.Color.Silver;
-            this.pictureBox17.Location = new System.Drawing.Point(487, 306);
+            this.pictureBox17.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox17.BackgroundImage = global::fagbros.Properties.Resources.Chest;
+            this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox17.Location = new System.Drawing.Point(486, 522);
             this.pictureBox17.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(35, 32);
+            this.pictureBox17.Size = new System.Drawing.Size(35, 33);
             this.pictureBox17.TabIndex = 34;
             this.pictureBox17.TabStop = false;
+            this.pictureBox17.Tag = "chest";
             // 
             // pictureBox16
             // 
             this.pictureBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.pictureBox16.BackgroundImage = global::fagbros.Properties.Resources.lava;
-            this.pictureBox16.Location = new System.Drawing.Point(878, 385);
+            this.pictureBox16.Location = new System.Drawing.Point(877, 597);
             this.pictureBox16.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(271, 67);
@@ -111,7 +126,7 @@
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.pictureBox15.BackgroundImage = global::fagbros.Properties.Resources.lava;
-            this.pictureBox15.Location = new System.Drawing.Point(202, 385);
+            this.pictureBox15.Location = new System.Drawing.Point(201, 597);
             this.pictureBox15.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(427, 67);
@@ -123,7 +138,7 @@
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Lime;
             this.pictureBox14.BackgroundImage = global::fagbros.Properties.Resources.grass;
-            this.pictureBox14.Location = new System.Drawing.Point(1148, 329);
+            this.pictureBox14.Location = new System.Drawing.Point(1147, 541);
             this.pictureBox14.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(205, 122);
@@ -135,7 +150,7 @@
             // 
             this.pictureBox13.BackColor = System.Drawing.Color.Lime;
             this.pictureBox13.BackgroundImage = global::fagbros.Properties.Resources.grass;
-            this.pictureBox13.Location = new System.Drawing.Point(1034, 264);
+            this.pictureBox13.Location = new System.Drawing.Point(1033, 389);
             this.pictureBox13.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(78, 23);
@@ -147,7 +162,7 @@
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Lime;
             this.pictureBox12.BackgroundImage = global::fagbros.Properties.Resources.grass;
-            this.pictureBox12.Location = new System.Drawing.Point(912, 264);
+            this.pictureBox12.Location = new System.Drawing.Point(901, 450);
             this.pictureBox12.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(78, 23);
@@ -159,7 +174,7 @@
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.Lime;
             this.pictureBox11.BackgroundImage = global::fagbros.Properties.Resources.grass;
-            this.pictureBox11.Location = new System.Drawing.Point(754, 357);
+            this.pictureBox11.Location = new System.Drawing.Point(753, 569);
             this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(61, 117);
@@ -171,7 +186,7 @@
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Lime;
             this.pictureBox10.BackgroundImage = global::fagbros.Properties.Resources.grass;
-            this.pictureBox10.Location = new System.Drawing.Point(438, 342);
+            this.pictureBox10.Location = new System.Drawing.Point(437, 554);
             this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(141, 23);
@@ -183,7 +198,7 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Lime;
             this.pictureBox9.BackgroundImage = global::fagbros.Properties.Resources.grass;
-            this.pictureBox9.Location = new System.Drawing.Point(814, 329);
+            this.pictureBox9.Location = new System.Drawing.Point(813, 541);
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(65, 122);
@@ -195,7 +210,7 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Lime;
             this.pictureBox8.BackgroundImage = global::fagbros.Properties.Resources.grass;
-            this.pictureBox8.Location = new System.Drawing.Point(694, 342);
+            this.pictureBox8.Location = new System.Drawing.Point(693, 554);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(63, 116);
@@ -207,7 +222,7 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Lime;
             this.pictureBox7.BackgroundImage = global::fagbros.Properties.Resources.grass;
-            this.pictureBox7.Location = new System.Drawing.Point(628, 323);
+            this.pictureBox7.Location = new System.Drawing.Point(627, 535);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(67, 129);
@@ -219,7 +234,7 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Lime;
             this.pictureBox6.BackgroundImage = global::fagbros.Properties.Resources.grass;
-            this.pictureBox6.Location = new System.Drawing.Point(655, 177);
+            this.pictureBox6.Location = new System.Drawing.Point(645, 338);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(215, 23);
@@ -231,7 +246,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Lime;
             this.pictureBox5.BackgroundImage = global::fagbros.Properties.Resources.grass;
-            this.pictureBox5.Location = new System.Drawing.Point(528, 177);
+            this.pictureBox5.Location = new System.Drawing.Point(550, 428);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(78, 23);
@@ -243,7 +258,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Lime;
             this.pictureBox4.BackgroundImage = global::fagbros.Properties.Resources.grass;
-            this.pictureBox4.Location = new System.Drawing.Point(430, 201);
+            this.pictureBox4.Location = new System.Drawing.Point(457, 290);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(78, 23);
@@ -255,7 +270,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Lime;
             this.pictureBox3.BackgroundImage = global::fagbros.Properties.Resources.grass;
-            this.pictureBox3.Location = new System.Drawing.Point(322, 238);
+            this.pictureBox3.Location = new System.Drawing.Point(318, 356);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(78, 23);
@@ -267,7 +282,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Lime;
             this.pictureBox2.BackgroundImage = global::fagbros.Properties.Resources.grass;
-            this.pictureBox2.Location = new System.Drawing.Point(227, 285);
+            this.pictureBox2.Location = new System.Drawing.Point(227, 450);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(78, 23);
@@ -279,7 +294,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Lime;
             this.pictureBox1.BackgroundImage = global::fagbros.Properties.Resources.grass;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 329);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 541);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(205, 122);
@@ -319,18 +334,95 @@
             // door
             // 
             this.door.BackColor = System.Drawing.Color.Transparent;
-            this.door.Location = new System.Drawing.Point(1253, 216);
+            this.door.Location = new System.Drawing.Point(1272, 428);
             this.door.Name = "door";
             this.door.Size = new System.Drawing.Size(60, 108);
             this.door.TabIndex = 37;
             this.door.TabStop = false;
             this.door.Tag = "door";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel2.BackgroundImage = global::fagbros.Properties.Resources.Coin_Bar;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Controls.Add(this.lblcoin);
+            this.panel2.Location = new System.Drawing.Point(118, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(95, 48);
+            this.panel2.TabIndex = 38;
+            // 
+            // lblcoin
+            // 
+            this.lblcoin.AutoSize = true;
+            this.lblcoin.BackColor = System.Drawing.Color.Transparent;
+            this.lblcoin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcoin.ForeColor = System.Drawing.Color.Black;
+            this.lblcoin.Location = new System.Drawing.Point(47, 15);
+            this.lblcoin.Name = "lblcoin";
+            this.lblcoin.Size = new System.Drawing.Size(21, 20);
+            this.lblcoin.TabIndex = 5;
+            this.lblcoin.Text = "X";
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox18.BackgroundImage = global::fagbros.Properties.Resources.Coin1;
+            this.pictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox18.Location = new System.Drawing.Point(684, 303);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(28, 30);
+            this.pictureBox18.TabIndex = 43;
+            this.pictureBox18.TabStop = false;
+            this.pictureBox18.Tag = "coin";
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox19.BackgroundImage = global::fagbros.Properties.Resources.Coin1;
+            this.pictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox19.Location = new System.Drawing.Point(341, 321);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(28, 30);
+            this.pictureBox19.TabIndex = 43;
+            this.pictureBox19.TabStop = false;
+            this.pictureBox19.Tag = "coin";
+            // 
+            // pictureBox20
+            // 
+            this.pictureBox20.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox20.BackgroundImage = global::fagbros.Properties.Resources.Coin1;
+            this.pictureBox20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox20.Location = new System.Drawing.Point(766, 506);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(28, 30);
+            this.pictureBox20.TabIndex = 43;
+            this.pictureBox20.TabStop = false;
+            this.pictureBox20.Tag = "coin";
+            // 
+            // pictureBox21
+            // 
+            this.pictureBox21.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox21.BackgroundImage = global::fagbros.Properties.Resources.Coin1;
+            this.pictureBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox21.Location = new System.Drawing.Point(1056, 338);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(28, 30);
+            this.pictureBox21.TabIndex = 43;
+            this.pictureBox21.TabStop = false;
+            this.pictureBox21.Tag = "coin";
+            // 
             // formLevel3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1325, 450);
+            this.BackgroundImage = global::fagbros.Properties.Resources.Background_1;
+            this.ClientSize = new System.Drawing.Size(1344, 661);
+            this.Controls.Add(this.pictureBox21);
+            this.Controls.Add(this.pictureBox20);
+            this.Controls.Add(this.pictureBox19);
+            this.Controls.Add(this.pictureBox18);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.door);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.player);
@@ -351,8 +443,9 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formLevel3";
-            this.Text = "level3";
+            this.Text = "FAG Bros - Level 3";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
@@ -376,6 +469,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.door)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -404,5 +503,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblheart;
         private System.Windows.Forms.PictureBox door;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblcoin;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.PictureBox pictureBox19;
+        private System.Windows.Forms.PictureBox pictureBox20;
+        private System.Windows.Forms.PictureBox pictureBox21;
     }
 }

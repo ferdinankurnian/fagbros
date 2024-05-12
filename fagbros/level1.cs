@@ -45,6 +45,8 @@ namespace fagbros
             // load total heart ke label
             getTotalHeart();
 
+            getTotalCoin();
+
             // if jumping is true and force is less than 0
             // then change jumping to false
             if (jumping && force < 0)
@@ -144,9 +146,10 @@ namespace fagbros
                     // jika player collide dengan chest
                     if (player.Bounds.IntersectsWith(x.Bounds))
                     {
+                        x.Tag = "openedchest";
                         Random rndCoinChest = new Random(); // buat object random
                         int randomCoinGot = rndCoinChest.Next(1, 6); // range coin dari 1 sampai 5
-                          // replace gambar menjadi chest terbuka
+                        x.BackgroundImage = Properties.Resources.opened_chest; // replace gambar menjadi chest terbuka
                         totalCoin += randomCoinGot; // tambahkan beberapa koin ke variabel coin
                     }
                 }
@@ -158,8 +161,21 @@ namespace fagbros
                 // stop the timer
                 gameTimer.Stop();
 
-                levelComplete lvlComplete = new levelComplete(); // ambil form levelComplete
-                lvlComplete.Show(); // Tampilkan dialog
+                using (levelComplete1 lvlComplete = new levelComplete1())
+                {
+                    if (lvlComplete.ShowDialog() == DialogResult.OK)
+                    {
+                        formLevel2 lvl2 = new formLevel2(); // form Level 1
+                        lvl2.Show();
+                        this.Hide();
+                    }
+                    else if (lvlComplete.ShowDialog() == DialogResult.No)
+                    {
+                        mainMenu MainMenu = new mainMenu(); // form Level 1
+                        MainMenu.Show();
+                        this.Hide();
+                    }
+                }
             }
         }
 
@@ -221,7 +237,7 @@ namespace fagbros
             else if (heart == 1)
             {
                 gameTimer.Stop(); // stop timer nya
-                MessageBox.Show("Game Over, Mulai dari awal lagi?"); // munculkan message box
+                MessageBox.Show("Game Over, Start over?"); // munculkan message box
                 heart += 4;
                 restartGame(); // restart gamenya
                 getTotalHeart(); // tampilkan total heartnya
@@ -234,6 +250,12 @@ namespace fagbros
             lblheart.Text = "X " + heart.ToString();
         }
 
+        // fungsi untuk meletakkan total coin ke label
+        public void getTotalCoin()
+        {
+            lblcoin.Text = "X " + totalCoin.ToString();
+        }
+
         // fungsi untuk restart game
         public void restartGame()
         {
@@ -241,10 +263,19 @@ namespace fagbros
             player.Location = new Point(130, 254);
         }
 
-        private void closeToMainMenu(object sender, FormClosedEventArgs e)
+        private void closeToMainMenu(object sender, FormClosingEventArgs e)
         {
-            mainMenu maMenu = new mainMenu(); // Instantiate a Form3 object.
-            maMenu.Show(); // Show Form3 and
+            DialogResult result = MessageBox.Show("Do you want to leave this level?", "Exit Level", MessageBoxButtons.YesNo);
+            // Check the result of the MessageBox
+            if (result == DialogResult.Yes)
+            {
+                mainMenu maMenu = new mainMenu(); // Instantiate a Form3 object.
+                maMenu.Show(); // Show Form3 and
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

@@ -12,6 +12,7 @@ using System.IO;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace fagbros
 {
@@ -20,92 +21,153 @@ namespace fagbros
         public mainMenu()
         {
             InitializeComponent();
-        }
-        public class User
-        {
-            public string Username { get; set; }
-            public string HasLevel1 { get; set; }
-            public string HasLevel2 { get; set; }
-            public string HasLevel3 { get; set; }
+            LoadUsers();
         }
 
-        private void closeGame(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
+        // fungsi untuk membuka list level
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            selectLevel modalSelectLevel = new selectLevel(); // Aktifkan Modal Select Level
-            modalSelectLevel.Show(); // Tampilkam modal Select Level
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void pictureBox14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        public static class UserManager
-        {
-            private static readonly string usersFilePath = "Data/user.json";
-
-            public static List<User> LoadUsers()
+            using (selectLevel modalSelectLevel = new selectLevel())
             {
-                if (File.Exists(usersFilePath))
+                if (modalSelectLevel.ShowDialog() == DialogResult.OK)
                 {
-                    var json = File.ReadAllText(usersFilePath);
-                    return JsonConvert.DeserializeObject<List<User>>(json) ?? new List<User>();
+                    // Retrieve the data from the dialog form
+                    string selectedLevel = modalSelectLevel.getLevel;
+
+                    if(selectedLevel == "lvl1")
+                    {
+                        formLevel1 lvl1 = new formLevel1(); // form Level 1
+                        lvl1.Show();
+                        this.Hide();
+                    }
+                    else if (selectedLevel == "lvl2")
+                    {
+                        formLevel2 lvl2 = new formLevel2(); // form Level 1
+                        lvl2.Show();
+                        this.Hide();
+                    }
+                    else if (selectedLevel == "lvl3")
+                    {
+                        formLevel3 lvl3 = new formLevel3(); // form Level 1
+                        lvl3.Show();
+                        this.Hide();
+                    }
                 }
-                return new List<User>();
-            }
-
-            public static void SaveUser(User user)
-            {
-                var users = LoadUsers();
-                users.Add(user);
-                var json = JsonConvert.SerializeObject(users, Formatting.Indented);
-                File.WriteAllText(usersFilePath, json);
-            }
-
-            public static bool AuthenticateUser(string username)
-            {
-                var users = LoadUsers();
-                return users.Any(u => u.Username == username);
             }
         }
 
-        private void btnLogInUser_Click(object sender, EventArgs e)
+        // fungsi untuk exit game dari quit button
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            string inputUsername = txtUserLogIn.Text;
-
-            if (UserManager.AuthenticateUser(inputUsername))
+            DialogResult exitButtonClicked = MessageBox.Show("Do you want to exit?", "Exit Game", MessageBoxButtons.YesNo);
+            // Check the result of the MessageBox
+            if (exitButtonClicked == DialogResult.Yes)
             {
-                greetingBox.BackgroundImage = Properties.Resources.Greet;
-            }
-            else
-            {
-                var newUser = new User
-                {
-                    Username = inputUsername
-                };
-                UserManager.SaveUser(newUser); 
+                this.Close();
+                Application.Exit();
             }
         }
 
+        // fungsi untuk membuka settings
         private void btnSettings_Click(object sender, EventArgs e)
         {
             settings modalSettings = new settings(); // Aktifkan Modal Select Level
             modalSettings.Show(); // Tampilkam modal Select Level
+        }
+
+        // fungsi untuk membaca user (load user)
+        public void LoadUsers()
+        {
+            // Define the directory path where you want to create a folder
+            string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "Data");
+
+            // Check if the directory already exists
+            if (!Directory.Exists(directoryPath))
+            {
+                // Create the directory if it does not exist
+                Directory.CreateDirectory(directoryPath);
+            }
+
+            // Define the file path within the directory
+            string filePath = Path.Combine(directoryPath, "user.json");
+
+            // Check if the file already exists
+            if (!File.Exists(filePath))
+            {
+                // Create the file and close it after writing
+                using (StreamWriter sw = File.CreateText(filePath))
+                {
+                    sw.WriteLine("{  }");
+                }
+
+                using (welcome welcomelogin = new welcome())
+                {
+                    if (welcomelogin.ShowDialog() == DialogResult.OK)
+                    {
+                        // Retrieve the data from the dialog form
+                        string usernameadded = welcomelogin.usernameRegistered;
+
+                        lblUsernameMainMenu.Text = usernameadded;
+                    }
+                }
+            }
+            else
+            {
+                string json = File.ReadAllText(filePath);
+
+                // Parse the JSON string into a JObject
+                var jsonObject = JObject.Parse(json);
+
+                // Check if the "username" key exists
+                if (jsonObject.ContainsKey("username"))
+                {
+                    // Retrieve the value associated with the "username" key
+                    string valueusername = jsonObject["username"].ToString();
+
+                    lblUsernameMainMenu.Text = valueusername;
+                }
+                else
+                {
+                    using (welcome welcomelogin = new welcome())
+                    {
+                        if (welcomelogin.ShowDialog() == DialogResult.OK)
+                        {
+                            // Retrieve the data from the dialog form
+                            string usernameadded = welcomelogin.usernameRegistered;
+
+                            lblUsernameMainMenu.Text = usernameadded;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        private void userAccount_Click(object sender, EventArgs e)
+        {
+            userAccountMenu accountmenu = new userAccountMenu();
+            accountmenu.ShowDialog();
+        }
+
+        private void lblUsernameMainMenu_Click(object sender, EventArgs e)
+        {
+            userAccountMenu accountmenu = new userAccountMenu();
+            accountmenu.ShowDialog();
+        }
+
+        // fungsi untuk exit game dari close form
+        private void closeGame(object sender, FormClosingEventArgs e)
+        {
+            DialogResult exitButtonClosed = MessageBox.Show("Do you want to exit?", "Exit Game", MessageBoxButtons.YesNo);
+            // Check the result of the MessageBox
+            if (exitButtonClosed == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

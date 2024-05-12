@@ -1,4 +1,5 @@
-﻿using System;
+﻿using fagbros.ModalDialogs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace fagbros
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formLevel2());
+            Application.Run(new mainMenu());
         }
     }
 }
