@@ -15,14 +15,16 @@ namespace fagbros
 {
     public partial class formLevel1 : Form
     {
+        // initialisasi variabel
         bool goleft = false; // boolean untuk kontrol player ke kiri
         bool goright = false; // boolean untuk kontrol player ke kanan
         bool jumping = false; // boolean untuk cek jika player melompat
         int jumpSpeed = 24; // integer untuk set kecepatan lompat
-        int force = 5; // force of the jump in an integer
-        int score = 0; // default score integer set to 0
-        int playSpeed = 24; //this integer will set players speed to 18
-        int backLeft = 8; // this integer will set the background moving speed to 8
+        int force = 5; // force dari lompat
+        int totalCoin = 0; // default total koin di set ke 0
+        int score = 0; // default total score di set ke 0
+        int playSpeed = 24; // integer untuk set kecepatan player
+        int heart = 5; // integer untuk total heart
 
         public formLevel1()
         {
@@ -31,27 +33,18 @@ namespace fagbros
             //masmenu.Hide();
         }
 
-        private void OnFrameChangedHandler(object sender, EventArgs e)
-        {
-            this.Invalidate();
-        }
-
-        private void formLevel1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        // fungsi untuk mengatur jalannya game
         private void mainGameTimer(object sender, EventArgs e)
         {
             // linking the jumpspeed integer with the player picture boxes to location
             player.Top += jumpSpeed;
+
             // refresh the player picture box consistently
             player.Refresh();
+
+            // load total heart ke label
+            getTotalHeart();
+
             // if jumping is true and force is less than 0
             // then change jumping to false
             if (jumping && force < 0)
@@ -71,6 +64,7 @@ namespace fagbros
                 // else change the jump speed to 12
                 jumpSpeed = 24;
             }
+
             // if go left is true and players left is greater than 100 pixels
             // only then move player towards left of the 
             if (goleft && player.Left > 8)
@@ -89,7 +83,7 @@ namespace fagbros
             // below if the for loop thats checking for all of the controls in this form
             foreach (Control x in this.Controls)
             {
-                // is X is a picture box and it has a tag of terrain
+                // jika x adalah terrain
                 if (x is PictureBox && x.Tag == "terrain")
                 {
                     // then we are checking if the player is colliding with the terrain
@@ -120,47 +114,52 @@ namespace fagbros
                     }
                 }
 
+                // jika x adalah lava
                 if (x is PictureBox && x.Tag == "lava")
                 {
+                    // jika player collide dengan lava
                     if (player.Bounds.IntersectsWith(x.Bounds))
                     {
-                        if(player.Top > x.Top)
+                        if(player.Top < x.Top)
                         {
-                            gameTimer.Stop(); // stop the timer
-                            MessageBox.Show("You Died!!!"); // show the message box
-                            restartGame();
+                            showDiedDialog(); // tampikan dialog
                         }
                     }
                 }
 
-                // if the picture box found has a tag of coin
+                // jika x adalah coin
                 if (x is PictureBox && x.Tag == "coin")
                 {
-                    // now if the player collides with the coin picture box
+                    // jika player collide dengan coin
                     if (player.Bounds.IntersectsWith(x.Bounds))
                     {
-                        this.Controls.Remove(x); // then we are going to remove the coin image
-                        score++; // add 1 to the score
+                        this.Controls.Remove(x); // sembunyikan koin yang sudah collide
+                        totalCoin++; // tambahkan 1 koin ke variabel coin
+                    }
+                }
+
+                // jika x adalah chest
+                if (x is PictureBox && x.Tag == "chest")
+                {
+                    // jika player collide dengan chest
+                    if (player.Bounds.IntersectsWith(x.Bounds))
+                    {
+                        Random rndCoinChest = new Random(); // buat object random
+                        int randomCoinGot = rndCoinChest.Next(1, 6); // range coin dari 1 sampai 5
+                          // replace gambar menjadi chest terbuka
+                        totalCoin += randomCoinGot; // tambahkan beberapa koin ke variabel coin
                     }
                 }
             }
-            // if the player collides with the door and has key boolean is true
+
+            // jika player sudah berada di finish
             if (player.Bounds.IntersectsWith(door.Bounds))
             {
-                // then we change the image of the door to open
-                // and we stop the timer
+                // stop the timer
                 gameTimer.Stop();
 
-                levelComplete lvlComplete = new levelComplete(); // Instantiate a Form3 object.
-                lvlComplete.Show(); // Show Form3 and
-            }
-            // this is where the player dies
-            // if the player goes below the forms height then we will end the game
-            if (player.Top + player.Height > this.ClientSize.Height + 60)
-            {
-                gameTimer.Stop(); // stop the timer
-                MessageBox.Show("You Died!!!"); // show the message box
-                restartGame();
+                levelComplete lvlComplete = new levelComplete(); // ambil form levelComplete
+                lvlComplete.Show(); // Tampilkan dialog
             }
         }
 
@@ -208,6 +207,34 @@ namespace fagbros
             }
         }
 
+        // fungsi untuk menampilkan dialog saat player mati
+        public void showDiedDialog()
+        {
+            if (heart > 1)
+            {
+                gameTimer.Stop(); // stop the timer
+                heart -= 1;
+                MessageBox.Show("You Died!!!"); // show the message box
+                restartGame();
+                getTotalHeart();
+            }
+            else if (heart == 1)
+            {
+                gameTimer.Stop(); // stop timer nya
+                MessageBox.Show("Game Over, Mulai dari awal lagi?"); // munculkan message box
+                heart += 4;
+                restartGame(); // restart gamenya
+                getTotalHeart(); // tampilkan total heartnya
+            }
+        }
+
+        // fungsi untuk meletakkan total heart ke label
+        public void getTotalHeart()
+        {
+            lblheart.Text = "X " + heart.ToString();
+        }
+
+        // fungsi untuk restart game
         public void restartGame()
         {
             gameTimer.Start();
@@ -218,11 +245,6 @@ namespace fagbros
         {
             mainMenu maMenu = new mainMenu(); // Instantiate a Form3 object.
             maMenu.Show(); // Show Form3 and
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

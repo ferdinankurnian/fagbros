@@ -163,6 +163,16 @@ namespace fagbros.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Coin1 {
+            get {
+                object obj = ResourceManager.GetObject("Coin1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dirt {
             get {
                 object obj = ResourceManager.GetObject("dirt", resourceCulture);
@@ -276,6 +286,16 @@ namespace fagbros.Properties {
         internal static System.Drawing.Bitmap Group_84 {
             get {
                 object obj = ResourceManager.GetObject("Group 84", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Heart_Bar {
+            get {
+                object obj = ResourceManager.GetObject("Heart Bar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -16,7 +16,7 @@ namespace fagbros
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formLevel1());
+            Application.Run(new formLevel2());
         }
     }
 }
