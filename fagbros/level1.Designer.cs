@@ -92,9 +92,9 @@
             // door
             // 
             this.door.BackColor = System.Drawing.Color.Transparent;
-            this.door.Location = new System.Drawing.Point(1272, 105);
+            this.door.Location = new System.Drawing.Point(1272, 203);
             this.door.Name = "door";
-            this.door.Size = new System.Drawing.Size(60, 108);
+            this.door.Size = new System.Drawing.Size(60, 10);
             this.door.TabIndex = 3;
             this.door.TabStop = false;
             this.door.Tag = "door";
@@ -409,7 +409,9 @@
             this.Controls.Add(this.pictureBox16);
             this.Controls.Add(this.pictureBox18);
             this.Controls.Add(this.pictureBox13);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "formLevel1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FAG Bros - Level 1";

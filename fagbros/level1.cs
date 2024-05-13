@@ -1,15 +1,19 @@
 ﻿using fagbros.ModalDialogs;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace fagbros
 {
@@ -161,7 +165,26 @@ namespace fagbros
                 // stop the timer
                 gameTimer.Stop();
 
-                using (levelComplete1 lvlComplete = new levelComplete1())
+                // Define the directory path where you want to create a folder
+                string filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data/user.json");
+
+                string json = File.ReadAllText(filePath);
+
+                // Deserialize the JSON string into a dynamic object
+                dynamic jsonObj = JsonConvert.DeserializeObject(json);
+
+                // Change the value of the specified key
+                jsonObj["haslevel2"] = "true";
+
+                // Serialize the object back into a JSON string
+                string output = JsonConvert.SerializeObject(jsonObj, Formatting.Indented);
+
+                // Write the JSON string back to the file
+                File.WriteAllText(filePath, output);
+
+                // Inside Form1 button click event
+                string inputValue = totalCoin.ToString();
+                using (levelComplete1 lvlComplete = new levelComplete1(inputValue))
                 {
                     if (lvlComplete.ShowDialog() == DialogResult.OK)
                     {
@@ -239,7 +262,7 @@ namespace fagbros
                 gameTimer.Stop(); // stop timer nya
                 MessageBox.Show("Game Over, Start over?"); // munculkan message box
                 heart += 4;
-                restartGame(); // restart gamenya
+                restartTotalGame(); // restart gamenya
                 getTotalHeart(); // tampilkan total heartnya
             }
         }
@@ -261,6 +284,14 @@ namespace fagbros
         {
             gameTimer.Start();
             player.Location = new Point(130, 254);
+        }
+
+        // fungsi untuk restart total game
+        public void restartTotalGame()
+        {
+            formLevel1 frmres = new formLevel1();
+            frmres.Show();
+            this.Hide();
         }
 
         private void closeToMainMenu(object sender, FormClosingEventArgs e)

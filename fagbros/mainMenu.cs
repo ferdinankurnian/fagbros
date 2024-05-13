@@ -59,13 +59,8 @@ namespace fagbros
         // fungsi untuk exit game dari quit button
         private void btnExit_Click(object sender, EventArgs e)
         {
-            DialogResult exitButtonClicked = MessageBox.Show("Do you want to exit?", "Exit Game", MessageBoxButtons.YesNo);
-            // Check the result of the MessageBox
-            if (exitButtonClicked == DialogResult.Yes)
-            {
-                this.Close();
-                Application.Exit();
-            }
+            Environment.Exit(0);
+            Application.Exit();
         }
 
         // fungsi untuk membuka settings
@@ -158,16 +153,7 @@ namespace fagbros
         // fungsi untuk exit game dari close form
         private void closeGame(object sender, FormClosingEventArgs e)
         {
-            DialogResult exitButtonClosed = MessageBox.Show("Do you want to exit?", "Exit Game", MessageBoxButtons.YesNo);
-            // Check the result of the MessageBox
-            if (exitButtonClosed == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-            else
-            {
-                e.Cancel = true;
-            }
+            Application.Exit();
         }
     }
 }

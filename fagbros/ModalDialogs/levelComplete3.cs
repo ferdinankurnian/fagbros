@@ -12,11 +12,20 @@ namespace fagbros.ModalDialogs
 {
     public partial class levelComplete3 : Form
     {
-        public levelComplete3()
+        public string getAllTotalCoin { get; set; }
+        public levelComplete3(string initialValue)
         {
             InitializeComponent();
             this.BackColor = Color.LimeGreen;
             this.TransparencyKey = Color.LimeGreen;
+            lblShowCoins.Text = initialValue;
+            lblShowScore.Text = initialValue;
+        }
+
+        private void goMainMenu_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

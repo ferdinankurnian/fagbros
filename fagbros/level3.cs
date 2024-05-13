@@ -156,15 +156,11 @@ namespace fagbros
                 // stop the timer
                 mainGameTimer.Stop();
 
-                using (levelComplete3 lvlComplete = new levelComplete3())
+                // Inside Form1 button click event
+                string inputValue = totalCoin.ToString();
+                using (levelComplete3 lvlComplete = new levelComplete3(inputValue))
                 {
                     if (lvlComplete.ShowDialog() == DialogResult.OK)
-                    {
-                        formLevel3 lvl2 = new formLevel3(); // form Level 1
-                        lvl2.Show();
-                        this.Hide();
-                    }
-                    else if (lvlComplete.ShowDialog() == DialogResult.No)
                     {
                         mainMenu MainMenu = new mainMenu(); // form Level 1
                         MainMenu.Show();
@@ -235,7 +231,7 @@ namespace fagbros
                 mainGameTimer.Stop(); // stop timer nya
                 MessageBox.Show("Game Over, Mulai dari awal lagi?"); // munculkan message box
                 heart += 4;
-                restartGame(); // restart gamenya
+                restartTotalGame(); // restart gamenya
                 getTotalHeart(); // tampilkan total heartnya
             }
         }
@@ -246,6 +242,12 @@ namespace fagbros
             lblheart.Text = "X " + heart.ToString();
         }
 
+        // fungsi untuk meletakkan total coin ke label
+        public void getTotalCoin()
+        {
+            lblcoin.Text = "X " + totalCoin.ToString();
+        }
+
         // fungsi untuk restart game
         public void restartGame()
         {
@@ -253,10 +255,38 @@ namespace fagbros
             player.Location = new Point(130, 254);
         }
 
+        // fungsi untuk restart total game
+        public void restartTotalGame()
+        {
+            formLevel3 frmres = new formLevel3();
+            frmres.Show();
+            this.Hide();
+        }
+
         private void closeToMainMenu(object sender, FormClosedEventArgs e)
         {
             mainMenu maMenu = new mainMenu(); // Instantiate a Form3 object.
             maMenu.Show(); // Show Form3 and
+        }
+
+        private void formLevel3_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
+
+        private void formLevel3_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you want to leave this level?", "Exit Level", MessageBoxButtons.YesNo);
+            // Check the result of the MessageBox
+            if (result == DialogResult.Yes)
+            {
+                mainMenu maMenu = new mainMenu(); // Instantiate a Form3 object.
+                maMenu.Show(); // Show Form3 and
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

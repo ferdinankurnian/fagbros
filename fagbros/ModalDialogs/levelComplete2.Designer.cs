@@ -30,8 +30,8 @@
         {
             this.goMainMenu = new System.Windows.Forms.Button();
             this.nextLevel = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblShowCoins = new System.Windows.Forms.Label();
+            this.lblShowScore = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // goMainMenu
@@ -43,8 +43,9 @@
             this.goMainMenu.Location = new System.Drawing.Point(33, 254);
             this.goMainMenu.Name = "goMainMenu";
             this.goMainMenu.Size = new System.Drawing.Size(110, 60);
-            this.goMainMenu.TabIndex = 4;
+            this.goMainMenu.TabIndex = 2;
             this.goMainMenu.UseVisualStyleBackColor = false;
+            this.goMainMenu.Click += new System.EventHandler(this.goMainMenu_Click);
             // 
             // nextLevel
             // 
@@ -55,34 +56,35 @@
             this.nextLevel.Location = new System.Drawing.Point(150, 254);
             this.nextLevel.Name = "nextLevel";
             this.nextLevel.Size = new System.Drawing.Size(158, 60);
-            this.nextLevel.TabIndex = 5;
+            this.nextLevel.TabIndex = 1;
             this.nextLevel.UseVisualStyleBackColor = false;
+            this.nextLevel.Click += new System.EventHandler(this.nextLevel_Click);
             // 
-            // label2
+            // lblShowCoins
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblShowCoins.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(191, 199);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "100";
+            this.lblShowCoins.AutoSize = true;
+            this.lblShowCoins.BackColor = System.Drawing.Color.Transparent;
+            this.lblShowCoins.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShowCoins.Location = new System.Drawing.Point(191, 199);
+            this.lblShowCoins.Name = "lblShowCoins";
+            this.lblShowCoins.Size = new System.Drawing.Size(35, 18);
+            this.lblShowCoins.TabIndex = 0;
+            this.lblShowCoins.Text = "100";
             // 
-            // label1
+            // lblShowScore
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblShowScore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(219, 157);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 18);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "100";
+            this.lblShowScore.AutoSize = true;
+            this.lblShowScore.BackColor = System.Drawing.Color.Transparent;
+            this.lblShowScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShowScore.Location = new System.Drawing.Point(219, 157);
+            this.lblShowScore.Name = "lblShowScore";
+            this.lblShowScore.Size = new System.Drawing.Size(35, 18);
+            this.lblShowScore.TabIndex = 0;
+            this.lblShowScore.Text = "100";
             // 
             // levelComplete2
             // 
@@ -93,14 +95,14 @@
             this.ClientSize = new System.Drawing.Size(342, 342);
             this.Controls.Add(this.goMainMenu);
             this.Controls.Add(this.nextLevel);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblShowCoins);
+            this.Controls.Add(this.lblShowScore);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "levelComplete2";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "levelComplete2";
+            this.Text = "22";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,7 +112,7 @@
 
         private System.Windows.Forms.Button goMainMenu;
         private System.Windows.Forms.Button nextLevel;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblShowCoins;
+        private System.Windows.Forms.Label lblShowScore;
     }
 }

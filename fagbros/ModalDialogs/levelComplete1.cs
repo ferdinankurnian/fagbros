@@ -12,11 +12,13 @@ namespace fagbros.ModalDialogs
 {
     public partial class levelComplete1 : Form
     {
-        public levelComplete1()
+        public levelComplete1(string inputValue)
         {
             InitializeComponent();
             this.BackColor = Color.LimeGreen;
             this.TransparencyKey = Color.LimeGreen;
+            lblShowCoins.Text = inputValue;
+            lblShowScore.Text = inputValue;
         }
 
         private void goMainMenu_Click(object sender, EventArgs e)
@@ -29,6 +31,11 @@ namespace fagbros.ModalDialogs
         {
             this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void levelComplete1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

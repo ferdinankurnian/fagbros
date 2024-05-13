@@ -46,7 +46,7 @@ namespace fagbros.ModalDialogs
             File.WriteAllText(_usersFilePath, json);
         }
 
-        private void btnEnter_Click(object sender, EventArgs e)
+        public void RegistUser()
         {
             string username = txtUsername.Text;
 
@@ -63,9 +63,26 @@ namespace fagbros.ModalDialogs
             }
         }
 
+        private void btnEnter_Click(object sender, EventArgs e)
+        {
+            RegistUser();
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        }
+
+        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                RegistUser();
+            }
         }
     }
 }

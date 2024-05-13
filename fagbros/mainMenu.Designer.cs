@@ -32,7 +32,6 @@
             this.btnPlay = new System.Windows.Forms.Button();
             this.Title = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnSettings = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
@@ -103,27 +102,13 @@
             this.btnExit.Font = new System.Drawing.Font("Maiandra GD", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(50)))), ((int)(((byte)(24)))), ((int)(((byte)(20)))));
             this.btnExit.Image = global::fagbros.Properties.Resources.Long_Button__1_;
-            this.btnExit.Location = new System.Drawing.Point(42, 344);
+            this.btnExit.Location = new System.Drawing.Point(42, 257);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(243, 64);
             this.btnExit.TabIndex = 0;
             this.btnExit.Text = "Quit Game";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSettings.Font = new System.Drawing.Font("Maiandra GD", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(50)))), ((int)(((byte)(24)))), ((int)(((byte)(20)))));
-            this.btnSettings.Image = global::fagbros.Properties.Resources.Long_Button__1_;
-            this.btnSettings.Location = new System.Drawing.Point(42, 264);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(243, 64);
-            this.btnSettings.TabIndex = 0;
-            this.btnSettings.Text = "Settings";
-            this.btnSettings.UseVisualStyleBackColor = true;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // pictureBox1
             // 
@@ -370,7 +355,6 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox22);
             this.Controls.Add(this.Title);
-            this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.pictureBox25);
@@ -414,7 +398,6 @@
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.Panel Title;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.PictureBox pictureBox15;
