@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
+using System.Media;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -117,6 +118,12 @@ namespace fagbros
                             player.Top = x.Top + x.Height + 20;
                             jumpSpeed -= playSpeed;
                         }
+
+                        if (goleft || goright)
+                        {
+                            SoundPlayer walkSound = new SoundPlayer("steps.wav");
+                            walkSound.Play();
+                        }
                     }
                 }
 
@@ -141,6 +148,9 @@ namespace fagbros
                     {
                         this.Controls.Remove(x); // sembunyikan koin yang sudah collide
                         totalCoin++; // tambahkan 1 koin ke variabel coin
+
+                        SoundPlayer coinSound = new SoundPlayer("coin_get.wav");
+                        coinSound.Play();
                     }
                 }
 
@@ -155,6 +165,9 @@ namespace fagbros
                         int randomCoinGot = rndCoinChest.Next(1, 6); // range coin dari 1 sampai 5
                         x.BackgroundImage = Properties.Resources.opened_chest; // replace gambar menjadi chest terbuka
                         totalCoin += randomCoinGot; // tambahkan beberapa koin ke variabel coin
+
+                        SoundPlayer chestSound = new SoundPlayer("tadareward.wav");
+                        chestSound.Play();
                     }
                 }
             }
@@ -221,6 +234,8 @@ namespace fagbros
 
             if (e.KeyCode == Keys.Up && !jumping)
             {
+                SoundPlayer jumpSound = new SoundPlayer("jump.wav");
+                jumpSound.Play();
                 // then we set jumping to true
                 jumping = true;
             }

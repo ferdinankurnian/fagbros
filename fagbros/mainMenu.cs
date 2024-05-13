@@ -13,6 +13,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Media;
 
 namespace fagbros
 {
@@ -22,6 +23,9 @@ namespace fagbros
         {
             InitializeComponent();
             LoadUsers();
+
+            SoundPlayer backSound = new SoundPlayer("backsound.wav");
+            backSound.Play();
         }
 
         // fungsi untuk membuka list level
