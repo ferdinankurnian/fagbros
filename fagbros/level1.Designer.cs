@@ -86,7 +86,6 @@
             // gameTimer
             // 
             this.gameTimer.Enabled = true;
-            this.gameTimer.Interval = 4;
             this.gameTimer.Tick += new System.EventHandler(this.mainGameTimer);
             // 
             // door

@@ -47,6 +47,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -116,6 +119,12 @@
     <Compile Include="mainMenu.Designer.cs">
       <DependentUpon>mainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModalDialogs\GameOver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalDialogs\GameOver.Designer.cs">
+      <DependentUpon>GameOver.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModalDialogs\levelComplete1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,11 +143,23 @@
     <Compile Include="ModalDialogs\levelComplete3.Designer.cs">
       <DependentUpon>levelComplete3.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModalDialogs\openedChest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalDialogs\openedChest.Designer.cs">
+      <DependentUpon>openedChest.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModalDialogs\selectLevel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModalDialogs\selectLevel.Designer.cs">
       <DependentUpon>selectLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModalDialogs\showHint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalDialogs\showHint.Designer.cs">
+      <DependentUpon>showHint.cs</DependentUpon>
     </Compile>
     <Compile Include="ModalDialogs\userAccountMenu.cs">
       <SubType>Form</SubType>
@@ -151,6 +172,12 @@
     </Compile>
     <Compile Include="ModalDialogs\welcome.Designer.cs">
       <DependentUpon>welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModalDialogs\YouDied.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalDialogs\YouDied.Designer.cs">
+      <DependentUpon>YouDied.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -173,6 +200,9 @@
     <EmbeddedResource Include="mainMenu.resx">
       <DependentUpon>mainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModalDialogs\GameOver.resx">
+      <DependentUpon>GameOver.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModalDialogs\levelComplete1.resx">
       <DependentUpon>levelComplete1.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,14 +212,23 @@
     <EmbeddedResource Include="ModalDialogs\levelComplete3.resx">
       <DependentUpon>levelComplete3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModalDialogs\openedChest.resx">
+      <DependentUpon>openedChest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModalDialogs\selectLevel.resx">
       <DependentUpon>selectLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModalDialogs\showHint.resx">
+      <DependentUpon>showHint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModalDialogs\userAccountMenu.resx">
       <DependentUpon>userAccountMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModalDialogs\welcome.resx">
       <DependentUpon>welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModalDialogs\YouDied.resx">
+      <DependentUpon>YouDied.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -204,6 +243,7 @@
     <EmbeddedResource Include="settings.resx">
       <DependentUpon>settings.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.manifest" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -397,6 +437,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pink flower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hint Modal %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chest Opened GUI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Game Over GUI %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Game Over GUI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\START OVER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TRY AGAIN.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

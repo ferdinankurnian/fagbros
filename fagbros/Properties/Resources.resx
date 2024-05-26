@@ -148,6 +148,9 @@
   <data name="Coin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Coin1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tree.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Background 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Background 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,6 +181,9 @@
   <data name="Group 82 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group 82 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Hint Modal (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hint Modal (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Long Button (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Long Button (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -187,14 +193,14 @@
   <data name="ButtonLevel 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonLevel 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Welcome GUI (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Welcome GUI (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dirt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dirt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Character1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Character1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Group 75" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Group 75.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Chest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Group 84" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group 84.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,17 +226,17 @@
   <data name="shunshine" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shunshine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dirt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dirt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Welcome GUI (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Welcome GUI (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Locked ButtonLevel 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Locked ButtonLevel 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Group 48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Group 48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Group 83" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group 83.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="User Account" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User Account.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Next" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,8 +250,8 @@
   <data name="Character" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Character.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tree.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Group 48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Group 48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Semak" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Semak.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,8 +262,8 @@
   <data name="Semak (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Semak (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="User Account" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\User Account.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Group 75" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Group 75.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Heart Bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Heart Bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -277,13 +283,25 @@
   <data name="Ground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Chest" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Chest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pink flower" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pink flower.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chest Opened GUI" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chest Opened GUI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Terrain Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Terrain Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pink flower" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pink flower.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Game Over GUI (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Game Over GUI (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Game Over GUI" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Game Over GUI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="START OVER" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\START OVER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TRY AGAIN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TRY AGAIN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -1,14 +1,16 @@
 ﻿using fagbros.ModalDialogs;
 using System;
+using System.Media;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace fagbros
 {
@@ -18,10 +20,10 @@ namespace fagbros
         bool goleft = false; // boolean untuk kontrol player ke kiri
         bool goright = false; // boolean untuk kontrol player ke kanan
         bool jumping = false; // boolean untuk cek jika player melompat
+        bool isCompleted = false; // boolean untuk cek level selesai
         int jumpSpeed = 24; // integer untuk set kecepatan lompat
         int force = 5; // force dari lompat
         int totalCoin = 0; // default total koin di set ke 0
-        int score = 0; // default total score di set ke 0
         int playSpeed = 24; // integer untuk set kecepatan player
         int heart = 5; // integer untuk total heart
 
@@ -112,8 +114,7 @@ namespace fagbros
 
                         if (goleft || goright)
                         {
-                            SoundPlayer walkSound = new SoundPlayer("steps.wav");
-                            walkSound.Play();
+                            playSound("resources/steps.wav");
                         }
                     }
                 }
@@ -126,6 +127,8 @@ namespace fagbros
                     {
                         if (player.Top < x.Top)
                         {
+                            playSound("resources/gameover.wav");
+                            setMovingToFalse();
                             showDiedDialog(); // tampikan dialog
                         }
                     }
@@ -137,11 +140,11 @@ namespace fagbros
                     // jika player collide dengan coin
                     if (player.Bounds.IntersectsWith(x.Bounds))
                     {
+                        playSound("resources/coin_get.wav");
+                        setMovingToFalse();
+
                         this.Controls.Remove(x); // sembunyikan koin yang sudah collide
                         totalCoin++; // tambahkan 1 koin ke variabel coin
-
-                        SoundPlayer coinSound = new SoundPlayer("coin_get.wav");
-                        coinSound.Play();
                     }
                 }
 
@@ -151,14 +154,19 @@ namespace fagbros
                     // jika player collide dengan chest
                     if (player.Bounds.IntersectsWith(x.Bounds))
                     {
+                        playSound("resources/tadareward.wav");
                         x.Tag = "openedchest";
                         Random rndCoinChest = new Random(); // buat object random
                         int randomCoinGot = rndCoinChest.Next(1, 6); // range coin dari 1 sampai 5
                         x.BackgroundImage = Properties.Resources.opened_chest; // replace gambar menjadi chest terbuka
                         totalCoin += randomCoinGot; // tambahkan beberapa koin ke variabel coin
 
-                        SoundPlayer chestSound = new SoundPlayer("tadareward.wav");
-                        chestSound.Play();
+                        setMovingToFalse();
+
+                        // Panggil openedChest
+                        string inputValue = randomCoinGot.ToString();
+                        openedChest openedChestForm = new openedChest(inputValue);
+                        openedChestForm.ShowDialog();
                     }
                 }
             }
@@ -169,6 +177,10 @@ namespace fagbros
                 // stop the timer
                 mainGameTimer.Stop();
 
+                playSound("resources/levelcomplete.wav");
+
+                isCompleted = true;
+
                 // Inside Form1 button click event
                 string inputValue = totalCoin.ToString();
                 using (levelComplete3 lvlComplete = new levelComplete3(inputValue))
@@ -177,7 +189,7 @@ namespace fagbros
                     {
                         mainMenu MainMenu = new mainMenu(); // form Level 1
                         MainMenu.Show();
-                        this.Hide();
+                        this.Close();
                     }
                 }
             }
@@ -202,8 +214,7 @@ namespace fagbros
 
             if (e.KeyCode == Keys.Up && !jumping)
             {
-                SoundPlayer jumpSound = new SoundPlayer("jump.wav");
-                jumpSound.Play();
+                playSound("resources/jump.wav");
                 // then we set jumping to true
                 jumping = true;
             }
@@ -237,14 +248,20 @@ namespace fagbros
             {
                 mainGameTimer.Stop(); // stop the timer
                 heart -= 1;
-                MessageBox.Show("You Died!!!"); // show the message box
+
+                YouDied youDiedForm = new YouDied();
+                youDiedForm.ShowDialog();
+
                 restartGame();
                 getTotalHeart();
             }
             else if (heart == 1)
             {
                 mainGameTimer.Stop(); // stop timer nya
-                MessageBox.Show("Game Over, Mulai dari awal lagi?"); // munculkan message box
+
+                GameOver gameOverForm = new GameOver();
+                gameOverForm.ShowDialog();
+
                 heart += 4;
                 restartTotalGame(); // restart gamenya
                 getTotalHeart(); // tampilkan total heartnya
@@ -278,6 +295,26 @@ namespace fagbros
             this.Hide();
         }
 
+        async static Task showHintDialog()
+        {
+            await Task.Delay(1000);
+            showHint formHint = new showHint(); // form Level 1
+            formHint.ShowDialog();
+        }
+
+        public void setMovingToFalse()
+        {
+            goleft = false;
+            goright = false;
+            jumping = false;
+        }
+
+        public void playSound(string soundFile)
+        {
+            SoundPlayer anySound = new SoundPlayer(soundFile);
+            anySound.Play();
+        }
+
         private void closeToMainMenu(object sender, FormClosedEventArgs e)
         {
             mainMenu maMenu = new mainMenu(); // Instantiate a Form3 object.
@@ -291,16 +328,23 @@ namespace fagbros
 
         private void formLevel3_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult result = MessageBox.Show("Do you want to leave this level?", "Exit Level", MessageBoxButtons.YesNo);
-            // Check the result of the MessageBox
-            if (result == DialogResult.Yes)
+            if (isCompleted == false)
             {
-                mainMenu maMenu = new mainMenu(); // Instantiate a Form3 object.
-                maMenu.Show(); // Show Form3 and
+                DialogResult result = MessageBox.Show("Do you want to leave this level?", "Exit Level", MessageBoxButtons.YesNo);
+                // Check the result of the MessageBox
+                if (result == DialogResult.Yes)
+                {
+                    mainMenu maMenu = new mainMenu(); // Instantiate a Form3 object.
+                    maMenu.Show(); // Show Form3 and
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
             }
             else
             {
-                e.Cancel = true;
+                isCompleted = false;
             }
         }
     }

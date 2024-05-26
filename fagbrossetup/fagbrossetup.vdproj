@@ -3,7 +3,7 @@
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:fagbrossetup"
+"ProjectName" = "8:FAG Bros"
 "LanguageId" = "3:1033"
 "CodePage" = "3:1252"
 "UILanguageId" = "3:1033"
@@ -13,6 +13,12 @@
 "SccProvider" = "8:"
     "Hierarchy"
     {
+        "Entry"
+        {
+        "MsmKey" = "8:_13AAB9E2361740C789EE222305EC2E13"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
         "Entry"
         {
         "MsmKey" = "8:_206293A7BC207F1A8DCA143BBDA706F0"
@@ -29,6 +35,12 @@
         {
         "MsmKey" = "8:_206293A7BC207F1A8DCA143BBDA706F0"
         "OwnerKey" = "8:_D308A5C6D4B0AE4E585207F538EA81C0"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_325223EA3959430DB7D2E8214140E6BD"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -123,6 +135,24 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_9DF7A551F4F8488796049285DA22FB74"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A4F8BA2B1DC44041B544B4F1C56498A6"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A8AC8322924D40E3B3D7FAC82258FC19"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_B1428B33D0B1D629D00111F9F32D659D"
         "OwnerKey" = "8:_3ACA775C68A246F081BDDD42C652C21C"
         "MsmSig" = "8:_UNDEFINED"
@@ -165,6 +195,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_DAF0B94D4F0445658E6DE361D0949472"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_E991EE183FFED659AE9BD1679B3EC341"
         "OwnerKey" = "8:_3ACA775C68A246F081BDDD42C652C21C"
         "MsmSig" = "8:_UNDEFINED"
@@ -189,8 +225,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_47FC06CEC2870E9E5BD0FDD586990FBD"
+        "MsmKey" = "8:_FD19598AE84E414692185200145ECCDD"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -259,6 +295,12 @@
         "OwnerKey" = "8:_54D2E4A1AF9C7D618ABE166597BF3ECF"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_47FC06CEC2870E9E5BD0FDD586990FBD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -277,6 +319,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -293,6 +343,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -322,6 +380,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_13AAB9E2361740C789EE222305EC2E13"
+            {
+            "SourcePath" = "8:..\\fagbros\\bin\\Debug\\resources\\jump.wav"
+            "TargetName" = "8:jump.wav"
+            "Tag" = "8:"
+            "Folder" = "8:_40F0866595CD45ECB3E7A765E13C5166"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_206293A7BC207F1A8DCA143BBDA706F0"
             {
             "AssemblyRegister" = "3:1"
@@ -351,6 +429,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_325223EA3959430DB7D2E8214140E6BD"
+            {
+            "SourcePath" = "8:..\\fagbros\\bin\\Debug\\resources\\tadareward.wav"
+            "TargetName" = "8:tadareward.wav"
+            "Tag" = "8:"
+            "Folder" = "8:_40F0866595CD45ECB3E7A765E13C5166"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_33B24BF4E077557D76928A68067567E2"
@@ -559,6 +657,66 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9DF7A551F4F8488796049285DA22FB74"
+            {
+            "SourcePath" = "8:..\\fagbros\\bin\\Debug\\resources\\gameover.wav"
+            "TargetName" = "8:gameover.wav"
+            "Tag" = "8:"
+            "Folder" = "8:_40F0866595CD45ECB3E7A765E13C5166"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A4F8BA2B1DC44041B544B4F1C56498A6"
+            {
+            "SourcePath" = "8:..\\fagbros\\bin\\Debug\\resources\\coin_get.wav"
+            "TargetName" = "8:coin_get.wav"
+            "Tag" = "8:"
+            "Folder" = "8:_40F0866595CD45ECB3E7A765E13C5166"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A8AC8322924D40E3B3D7FAC82258FC19"
+            {
+            "SourcePath" = "8:..\\fagbros\\bin\\Debug\\resources\\levelcomplete.wav"
+            "TargetName" = "8:levelcomplete.wav"
+            "Tag" = "8:"
+            "Folder" = "8:_40F0866595CD45ECB3E7A765E13C5166"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B1428B33D0B1D629D00111F9F32D659D"
             {
             "AssemblyRegister" = "3:1"
@@ -652,6 +810,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DAF0B94D4F0445658E6DE361D0949472"
+            {
+            "SourcePath" = "8:..\\fagbros\\bin\\Debug\\resources\\steps.wav"
+            "TargetName" = "8:steps.wav"
+            "Tag" = "8:"
+            "Folder" = "8:_40F0866595CD45ECB3E7A765E13C5166"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E991EE183FFED659AE9BD1679B3EC341"
             {
             "AssemblyRegister" = "3:1"
@@ -681,6 +859,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FD19598AE84E414692185200145ECCDD"
+            {
+            "SourcePath" = "8:..\\fagbros\\bin\\Debug\\resources\\backsound.wav"
+            "TargetName" = "8:backsound.wav"
+            "Tag" = "8:"
+            "Folder" = "8:_40F0866595CD45ECB3E7A765E13C5166"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -749,9 +947,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:fagbrossetup"
+        "ProductName" = "8:FAG Bros"
         "ProductCode" = "8:{176D8D94-76E2-4728-A2E0-2B32E3E6A5C2}"
-        "PackageCode" = "8:{4601EB40-213C-45CE-8ED0-B3CB05441089}"
+        "PackageCode" = "8:{EB8231AD-2EB7-40E8-A9DF-24D37AE6B9E2}"
         "UpgradeCode" = "8:{DA0FAF64-84AB-4A53-B6B9-42454EF8576D}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
@@ -762,8 +960,8 @@
         "Manufacturer" = "8:FAG Group"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:fagbrossetup"
-        "Subject" = "8:"
+        "Title" = "8:FAG Bros"
+        "Subject" = "8:An 2D Parkour Game"
         "ARPCONTACT" = "8:FAG Group"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:FAG Bros is an simple parkour game."
@@ -881,6 +1079,20 @@
             "Transitive" = "11:FALSE"
             "Target" = "8:_3ACA775C68A246F081BDDD42C652C21C"
             "Folder" = "8:_D6E13E24A2734383BE3CDAA9C3754407"
+            "WorkingFolder" = "8:_D42E349DEDD945EEABC42D0087DDF84D"
+            "Icon" = "8:_51854DD28CC6496E865053D8B99105C1"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D2156867C62B431F9E2F304269ACEF3F"
+            {
+            "Name" = "8:FAG Bros"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_3ACA775C68A246F081BDDD42C652C21C"
+            "Folder" = "8:_C2ADED9EEF0E486EB0F9FF50C8EF7E34"
             "WorkingFolder" = "8:_D42E349DEDD945EEABC42D0087DDF84D"
             "Icon" = "8:_51854DD28CC6496E865053D8B99105C1"
             "Feature" = "8:"

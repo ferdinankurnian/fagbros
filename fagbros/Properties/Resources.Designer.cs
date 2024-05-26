@@ -173,6 +173,16 @@ namespace fagbros.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Chest_Opened_GUI {
+            get {
+                object obj = ResourceManager.GetObject("Chest Opened GUI", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Close_Icon {
             get {
                 object obj = ResourceManager.GetObject("Close Icon", resourceCulture);
@@ -266,6 +276,26 @@ namespace fagbros.Properties {
         internal static System.Drawing.Bitmap ezgif_5_8a727438d8_11 {
             get {
                 object obj = ResourceManager.GetObject("ezgif-5-8a727438d8 11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Game_Over_GUI {
+            get {
+                object obj = ResourceManager.GetObject("Game Over GUI", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Game_Over_GUI__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Game Over GUI (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -376,6 +406,16 @@ namespace fagbros.Properties {
         internal static System.Drawing.Bitmap Heart_Bar {
             get {
                 object obj = ResourceManager.GetObject("Heart Bar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hint_Modal__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Hint Modal (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -533,6 +573,16 @@ namespace fagbros.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap START_OVER {
+            get {
+                object obj = ResourceManager.GetObject("START OVER", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Terrain_Left {
             get {
                 object obj = ResourceManager.GetObject("Terrain Left", resourceCulture);
@@ -576,6 +626,16 @@ namespace fagbros.Properties {
         internal static System.Drawing.Bitmap Tree_Logs {
             get {
                 object obj = ResourceManager.GetObject("Tree Logs", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TRY_AGAIN {
+            get {
+                object obj = ResourceManager.GetObject("TRY AGAIN", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -57,8 +57,6 @@ namespace fagbros.ModalDialogs
                 _users.Add("haslevel3", "false");
                 SaveUsers();
                 usernameRegistered = username;
-                MessageBox.Show("Username added! Now you can play!");
-                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
         }

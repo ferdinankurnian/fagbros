@@ -20,7 +20,7 @@ namespace fagbros.ModalDialogs
             lblShowCoins.Text = inputValue;
             lblShowScore.Text = inputValue;
         }
-
+          
         private void goMainMenu_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.No;

@@ -24,7 +24,7 @@ namespace fagbros
             InitializeComponent();
             LoadUsers();
 
-            SoundPlayer backSound = new SoundPlayer("backsound.wav");
+            SoundPlayer backSound = new SoundPlayer("resources/backsound.wav");
             backSound.Play();
         }
 
@@ -144,11 +144,15 @@ namespace fagbros
 
         private void userAccount_Click(object sender, EventArgs e)
         {
-            userAccountMenu accountmenu = new userAccountMenu();
-            accountmenu.ShowDialog();
+            showAccountMenu();
         }
 
         private void lblUsernameMainMenu_Click(object sender, EventArgs e)
+        {
+            showAccountMenu();
+        }
+
+        public void showAccountMenu()
         {
             userAccountMenu accountmenu = new userAccountMenu();
             accountmenu.ShowDialog();
